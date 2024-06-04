@@ -12,15 +12,21 @@
 }
 
 .popup-container{
-    position: ;
+    position:absolute;
     width: 100%;
     height: 100%;
-    background: rgb(185, 207, 235);
+    background: rgb(0, 0, 0, .3);
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
     pointer-events: none;
+}
+
+.popup-container.active{
+    opacity: 1;
+    pointer-events: auto;
+    transition: .6s ease;
 }
 
 .popup-container .popup-box{
@@ -29,16 +35,23 @@
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     padding: 30px;
+    transform: scale(0);
+}
+
+.popup-container.active .popup-box {
+    transform: scale(1);
+    transition: .6s ease;
+    transition-delay: .25s;
 }
 
 .popup-box h3{
-    color: darkblue;
+    color: rgb(0, 0, 0);
     line-height: 1;
     font-style:italic;
 }
 
 .popup-box p {
-    color: darkblue;
+    color: black;
 }
 
 .popup-box .close-btn {
