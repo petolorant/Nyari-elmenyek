@@ -1,11 +1,17 @@
-const showPopup = document.querySelector('.show-popup');
-const popupContainer = document.querySelector('.popup-container');
-const closeBtn = document.querySelector('.close-btn');
+const showPopupButtons = document.querySelectorAll('.show-popup');
+const closeButtons = document.querySelectorAll('.close-btn');
 
-showPopup.onclick = () => {
-    popupContainer.classList.add('active');
-}
+showPopupButtons.forEach(button => {
+    button.onclick = () => {
+        const popupId = button.getAttribute('data-popup-id');
+        const popup = document.getElementById(popupId);
+        popup.classList.add('active');
+    }
+});
 
-closeBtn.onclick = () => {
-    popupContainer.classList.remove('active');
-}
+closeButtons.forEach(button => {
+    button.onclick = () => {
+        const popupContainer = button.closest('.popup-container');
+        popupContainer.classList.remove('active');
+    }
+});
