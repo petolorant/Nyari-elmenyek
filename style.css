@@ -1,8 +1,11 @@
 body {
-    background-image: url('');
+    background-image: url('https://cdn.wallpapersafari.com/89/5/y6WSD0.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: blue;
+    background-position: center;
+    background-attachment: fixed;
+    align-items: center;
+
   }
 
   h1{

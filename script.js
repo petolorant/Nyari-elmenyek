@@ -1,4 +1,4 @@
-const showPopup = document.querySelector('.show-popup');
+const showPopup = document.getElementsByClassName('.show-popup');
 const popupContainer = document.querySelector('.popup-container');
 const closeBtn = document.querySelector('.close-btn');
 
